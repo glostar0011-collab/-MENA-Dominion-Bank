@@ -2017,4 +2017,750 @@
                                 </button>
                                 <button class="quick-action-btn">
                                     <i class="fas fa-exchange-alt"></i>
-                                    <span>Exchange</span
+                                    <span>Exchange</span>
+                                </button>
+                                <button class="quick-action-btn">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <span>Invest</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-summary">
+                            <div class="total-balance">
+                                <p class="balance-label">Total Portfolio Value</p>
+                                <h3 class="balance-amount" id="totalBalance">$0.00</h3>
+                                <p class="balance-change">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span id="balanceChange">+0.00%</span> this month
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Multi-Currency Vaults -->
+                <section class="currency-vaults-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Multi-Currency <span class="gold-text">Vaults</span></h2>
+                        <p class="section-subtitle">Your global wealth ecosystem</p>
+                    </div>
+                    <div class="vaults-grid">
+                        <!-- USD Vault -->
+                        <div class="vault-card">
+                            <div class="vault-header">
+                                <div class="vault-currency">
+                                    <span class="currency-flag">🇺🇸</span>
+                                    <div>
+                                        <div class="currency-code">USD</div>
+                                        <div style="font-size: 0.85rem; color: var(--grey-medium);">US Dollar</div>
+                                    </div>
+                                </div>
+                                <span class="vault-status">Active</span>
+                            </div>
+                            <div class="vault-balance" id="usdBalance">$0.00</div>
+                            <div class="vault-equivalent">Primary Currency</div>
+                            <div class="vault-actions">
+                                <button class="vault-btn">
+                                    <i class="fas fa-plus"></i> Deposit
+                                </button>
+                                <button class="vault-btn">
+                                    <i class="fas fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- EUR Vault -->
+                        <div class="vault-card">
+                            <div class="vault-header">
+                                <div class="vault-currency">
+                                    <span class="currency-flag">🇪🇺</span>
+                                    <div>
+                                        <div class="currency-code">EUR</div>
+                                        <div style="font-size: 0.85rem; color: var(--grey-medium);">Euro</div>
+                                    </div>
+                                </div>
+                                <span class="vault-status">Active</span>
+                            </div>
+                            <div class="vault-balance" id="eurBalance">€0.00</div>
+                            <div class="vault-equivalent" id="eurEquivalent">≈ $0.00 USD</div>
+                            <div class="vault-actions">
+                                <button class="vault-btn">
+                                    <i class="fas fa-plus"></i> Deposit
+                                </button>
+                                <button class="vault-btn">
+                                    <i class="fas fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- GBP Vault -->
+                        <div class="vault-card">
+                            <div class="vault-header">
+                                <div class="vault-currency">
+                                    <span class="currency-flag">🇬🇧</span>
+                                    <div>
+                                        <div class="currency-code">GBP</div>
+                                        <div style="font-size: 0.85rem; color: var(--grey-medium);">British Pound</div>
+                                    </div>
+                                </div>
+                                <span class="vault-status">Active</span>
+                            </div>
+                            <div class="vault-balance" id="gbpBalance">£0.00</div>
+                            <div class="vault-equivalent" id="gbpEquivalent">≈ $0.00 USD</div>
+                            <div class="vault-actions">
+                                <button class="vault-btn">
+                                    <i class="fas fa-plus"></i> Deposit
+                                </button>
+                                <button class="vault-btn">
+                                    <i class="fas fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Investment Portfolio -->
+                    <div class="investment-portfolio">
+                        <div class="portfolio-header">
+                            <h3 class="portfolio-title">Investment Portfolio</h3>
+                            <div class="portfolio-growth">
+                                <p class="growth-label">Total Growth</p>
+                                <p class="growth-value" id="portfolioGrowth">+0.00%</p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-chart" id="portfolioChart">
+                            <!-- Chart bars will be generated dynamically -->
+                        </div>
+
+                        <div class="portfolio-assets" id="portfolioAssets">
+                            <!-- Asset items will be generated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Card Manager -->
+                    <div class="card-manager">
+                        <h3 class="section-title-small">Physical Card Manager</h3>
+                        
+                        <div class="physical-card">
+                            <div class="card-info">
+                                <span class="card-type-badge">PLATINUM SOVEREIGN</span>
+                                <div class="card-number-display" id="cardNumberDisplay">•••• •••• •••• 8847</div>
+                                <div class="card-details-grid">
+                                    <div class="card-detail">
+                                        <div class="card-detail-label">Card Holder</div>
+                                        <div class="card-detail-value" id="cardHolderName">JOHN DOE</div>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-detail-label">Status</div>
+                                        <div class="card-detail-value" id="cardStatusDisplay">Active</div>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-detail-label">Valid Thru</div>
+                                        <div class="card-detail-value">12/28</div>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-detail-label">CVV</div>
+                                        <div class="card-detail-value">•••</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-controls">
+                            <button class="card-control-btn" id="freezeCardBtn" onclick="toggleCardFreeze()">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Freeze Card</span>
+                            </button>
+                            <button class="card-control-btn">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </button>
+                            <button class="card-control-btn">
+                                <i class="fas fa-eye"></i>
+                                <span>View Details</span>
+                            </button>
+                            <button class="card-control-btn">
+                                <i class="fas fa-sync"></i>
+                                <span>Replace Card</span>
+                            </button>
+                        </div>
+
+                        <div class="card-limit-info">
+                            <p class="limit-label">Monthly Spending Limit</p>
+                            <div class="limit-bar">
+                                <div class="limit-fill" id="limitFill" style="width: 0%"></div>
+                            </div>
+                            <div class="limit-values">
+                                <span class="limit-used" id="limitUsed">$0</span>
+                                <span class="limit-total" id="limitTotal">of $0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transaction History -->
+                <section class="transaction-section">
+                    <div class="transaction-container">
+                        <div class="transaction-header">
+                            <h3 class="section-title-small">Transaction History</h3>
+                            <div class="transaction-filters">
+                                <button class="filter-btn active">All</button>
+                                <button class="filter-btn">Credits</button>
+                                <button class="filter-btn">Debits</button>
+                                <button class="filter-btn">Pending</button>
+                            </div>
+                        </div>
+                        <div class="transaction-list" id="transactionList">
+                            <!-- Transactions will be loaded dynamically -->
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services -->
+                <section class="services-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Premium <span class="gold-text">Services</span></h2>
+                        <p class="section-subtitle">Exclusive benefits for sovereign wealth members</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="service-title">Offshore Equity</h4>
+                            <p class="service-description">
+                                Access tax-optimized offshore equity structures with institutional-grade management.
+                            </p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4 class="service-title">Sovereign Debt</h4>
+                            <p class="service-description">
+                                Invest in exclusive sovereign debt instruments with superior risk-adjusted returns.
+                            </p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h4 class="service-title">Asset Protection</h4>
+                            <p class="service-description">
+                                Multi-jurisdictional asset protection strategies for global wealth preservation.
+                            </p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-concierge-bell"></i>
+                            </div>
+                            <h4 class="service-title">Private Concierge</h4>
+                            <p class="service-description">
+                                24/7 dedicated relationship managers for personalized financial guidance.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Dashboard -->
+                <section class="analytics-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Performance <span class="gold-text">Analytics</span></h2>
+                        <p class="section-subtitle">Real-time insights into your wealth</p>
+                    </div>
+                    <div class="analytics-grid" id="analyticsGrid">
+                        <!-- Analytics cards will be generated dynamically -->
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h4>MENA Dominion Bank</h4>
+                        <p style="color: var(--grey-medium); line-height: 1.8;">
+                            Empowering global wealth through cutting-edge financial technology and sovereign banking solutions.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Wealth Management</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">24/7 Concierge</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 MENA Dominion Bank. All rights reserved. | Licensed & Regulated Financial Institution</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // ==================== GLOBAL STATE & CONFIGURATION ====================
+        const CONFIG = {
+            API_URL: 'https://api.sheety.co/47968877755ad230ff36a13667dfd22e/onlineBanking/userDatabase',
+            SESSION_TIMEOUT: 1800000, // 30 minutes
+            CURRENCY_RATES: {
+                EUR: 0.92,
+                GBP: 0.79
+            }
+        };
+
+        let currentUser = null;
+        let sessionTimeout = null;
+        let userData = null;
+
+        // ==================== UTILITY FUNCTIONS ====================
+        function formatCurrency(amount, currency = 'USD') {
+            const symbols = { USD: ', EUR: '€', GBP: '£' };
+            const formatted = Math.abs(amount).toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            return `${symbols[currency]}${formatted}`;
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        function getCurrentDateTime() {
+            const now = new Date();
+            return now.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function getInitials(name) {
+            if (!name) return 'U';
+            const parts = name.split(' ');
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[1][0]).toUpperCase();
+            }
+            return name.substring(0, 2).toUpperCase();
+        }
+
+        function showElement(elementId) {
+            document.getElementById(elementId).classList.remove('hidden');
+        }
+
+        function hideElement(elementId) {
+            document.getElementById(elementId).classList.add('hidden');
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('loginError');
+            const errorText = document.getElementById('errorText');
+            errorText.textContent = message;
+            errorDiv.classList.add('show');
+            setTimeout(() => {
+                errorDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const icon = event.target;
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // ==================== NAVIGATION FUNCTIONS ====================
+        function showLanding() {
+            hideElement('loginVault');
+            hideElement('dashboard');
+            showElement('landingPage');
+        }
+
+        function showLogin() {
+            hideElement('landingPage');
+            hideElement('dashboard');
+            showElement('loginVault');
+            document.getElementById('loginUsername').focus();
+        }
+
+        function showDashboard() {
+            hideElement('landingPage');
+            hideElement('loginVault');
+            showElement('dashboard');
+            initializeDashboard();
+        }
+
+        // ==================== SESSION MANAGEMENT ====================
+        function startSessionTimeout() {
+            if (sessionTimeout) {
+                clearTimeout(sessionTimeout);
+            }
+            sessionTimeout = setTimeout(() => {
+                alert('Your session has expired for security reasons. Please log in again.');
+                handleLogout();
+            }, CONFIG.SESSION_TIMEOUT);
+        }
+
+        function resetSessionTimeout() {
+            startSessionTimeout();
+        }
+
+        // Add activity listeners
+        document.addEventListener('mousemove', resetSessionTimeout);
+        document.addEventListener('keypress', resetSessionTimeout);
+        document.addEventListener('click', resetSessionTimeout);
+
+        // ==================== API FUNCTIONS ====================
+        async function fetchUserData() {
+            try {
+                const response = await fetch(CONFIG.API_URL);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch user data');
+                }
+                const data = await response.json();
+                return data.userDatabase || [];
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+                showError('Unable to connect to server. Please try again.');
+                return null;
+            }
+        }
+
+        async function authenticateUser(username, password, pin) {
+            const users = await fetchUserData();
+            if (!users) return null;
+
+            const user = users.find(u => 
+                u.username === username && 
+                u.password === password && 
+                u.pin === pin
+            );
+
+            return user;
+        }
+
+        // ==================== LOGIN HANDLER ====================
+        async function handleLogin() {
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            const pin = document.getElementById('loginPin').value.trim();
+
+            // Validation
+            if (!username || !password || !pin) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            if (pin.length !== 4 || !/^\d{4}$/.test(pin)) {
+                showError('PIN must be exactly 4 digits');
+                return;
+            }
+
+            // Show loading state
+            const loginButton = document.querySelector('.login-button');
+            const originalText = loginButton.innerHTML;
+            loginButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Authenticating...';
+            loginButton.disabled = true;
+
+            try {
+                const user = await authenticateUser(username, password, pin);
+
+                if (user) {
+                    currentUser = user;
+                    userData = user;
+                    startSessionTimeout();
+                    showDashboard();
+                } else {
+                    showError('Invalid credentials. Please check your username, password, and PIN.');
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                showError('An error occurred during login. Please try again.');
+            } finally {
+                loginButton.innerHTML = originalText;
+                loginButton.disabled = false;
+            }
+        }
+
+        // ==================== LOGOUT HANDLER ====================
+        function handleLogout() {
+            if (sessionTimeout) {
+                clearTimeout(sessionTimeout);
+            }
+            currentUser = null;
+            userData = null;
+            document.getElementById('loginUsername').value = '';
+            document.getElementById('loginPassword').value = '';
+            document.getElementById('loginPin').value = '';
+            showLanding();
+        }
+
+        // ==================== DASHBOARD INITIALIZATION ====================
+        function initializeDashboard() {
+            if (!userData) return;
+
+            // Update welcome section
+            updateWelcomeSection();
+            
+            // Update account balances
+            updateAccountBalances();
+            
+            // Update investment portfolio
+            updateInvestmentPortfolio();
+            
+            // Update card manager
+            updateCardManager();
+            
+            // Load transaction history
+            loadTransactionHistory();
+            
+            // Update analytics
+            updateAnalytics();
+        }
+
+        function updateWelcomeSection() {
+            const fullName = userData.fullName || 'Valued Member';
+            const firstName = fullName.split(' ')[0];
+            
+            document.getElementById('welcomeName').textContent = firstName;
+            document.getElementById('welcomeDate').textContent = getCurrentDateTime();
+            document.getElementById('userName').textContent = fullName;
+            document.getElementById('userAvatar').textContent = getInitials(fullName);
+        }
+
+        function updateAccountBalances() {
+            // Get balance data
+            const usdBalance = parseFloat(userData.balanceUsd) || 0;
+            const eurBalance = parseFloat(userData.balanceEur) || 0;
+            const gbpBalance = parseFloat(userData.balanceGbp) || 0;
+
+            // Convert all to USD for total
+            const eurInUsd = eurBalance / CONFIG.CURRENCY_RATES.EUR;
+            const gbpInUsd = gbpBalance / CONFIG.CURRENCY_RATES.GBP;
+            const totalUsd = usdBalance + eurInUsd + gbpInUsd;
+
+            // Update displays
+            document.getElementById('usdBalance').textContent = formatCurrency(usdBalance, 'USD');
+            document.getElementById('eurBalance').textContent = formatCurrency(eurBalance, 'EUR');
+            document.getElementById('gbpBalance').textContent = formatCurrency(gbpBalance, 'GBP');
+            
+            document.getElementById('eurEquivalent').textContent = `≈ ${formatCurrency(eurInUsd, 'USD')}`;
+            document.getElementById('gbpEquivalent').textContent = `≈ ${formatCurrency(gbpInUsd, 'USD')}`;
+            
+            document.getElementById('totalBalance').textContent = formatCurrency(totalUsd, 'USD');
+
+            // Calculate and display balance change (mock data)
+            const balanceChange = 2.34;
+            document.getElementById('balanceChange').textContent = `+${balanceChange.toFixed(2)}%`;
+        }
+
+        function updateInvestmentPortfolio() {
+            const investmentTotal = parseFloat(userData.investmentTotal) || 0;
+            const investmentGrowth = parseFloat(userData.investmentGrowth) || 0;
+
+            document.getElementById('portfolioGrowth').textContent = `+${investmentGrowth.toFixed(2)}%`;
+
+            // Parse analytics data for chart
+            const analyticsData = userData.analyticsData ? 
+                userData.analyticsData.split(',').map(v => parseFloat(v) || 0) : 
+                [12, 19, 15, 25, 22, 30, 28, 35, 32, 38, 42, 45];
+
+            renderPortfolioChart(analyticsData);
+            renderPortfolioAssets(investmentTotal);
+        }
+
+        function renderPortfolioChart(data) {
+            const chartContainer = document.getElementById('portfolioChart');
+            chartContainer.innerHTML = '';
+
+            const maxValue = Math.max(...data);
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            data.forEach((value, index) => {
+                const height = (value / maxValue) * 100;
+                const bar = document.createElement('div');
+                bar.className = 'chart-bar';
+                bar.style.height = `${height}%`;
+                bar.title = `${months[index]}: ${value}%`;
+                
+                const label = document.createElement('span');
+                label.className = 'chart-bar-label';
+                label.textContent = months[index];
+                bar.appendChild(label);
+                
+                chartContainer.appendChild(bar);
+            });
+        }
+
+        function renderPortfolioAssets(totalInvestment) {
+            const assetsContainer = document.getElementById('portfolioAssets');
+            
+            const assets = [
+                { name: 'Offshore Equity Fund', value: totalInvestment * 0.4, change: 5.2, shares: '2,450' },
+                { name: 'Sovereign Bonds', value: totalInvestment * 0.3, change: 2.8, shares: '1,870' },
+                { name: 'Global Real Estate', value: totalInvestment * 0.2, change: -1.2, shares: '980' },
+                { name: 'Precious Metals', value: totalInvestment * 0.1, change: 3.5, shares: '545' }
+            ];
+
+            assetsContainer.innerHTML = assets.map(asset => `
+                <div class="asset-item">
+                    <div class="asset-header">
+                        <span class="asset-name">${asset.name}</span>
+                        <span class="asset-change ${asset.change >= 0 ? 'positive' : 'negative'}">
+                            ${asset.change >= 0 ? '+' : ''}${asset.change.toFixed(1)}%
+                        </span>
+                    </div>
+                    <div class="asset-value">${formatCurrency(asset.value, 'USD')}</div>
+                    <div class="asset-shares">${asset.shares} shares</div>
+                </div>
+            `).join('');
+        }
+
+        function updateCardManager() {
+            const fullName = userData.fullName || 'VALUED MEMBER';
+            const cardStatus = userData.cardStatus || 'Active';
+            const cardLimit = parseFloat(userData.cardLimit) || 50000;
+            
+            // Calculate mock spending (30% of limit for demo)
+            const spentAmount = cardLimit * 0.30;
+            const spentPercentage = (spentAmount / cardLimit) * 100;
+
+            document.getElementById('cardHolderName').textContent = fullName.toUpperCase();
+            document.getElementById('cardStatusDisplay').textContent = cardStatus;
+            document.getElementById('limitUsed').textContent = formatCurrency(spentAmount, 'USD');
+            document.getElementById('limitTotal').textContent = formatCurrency(cardLimit, 'USD');
+            document.getElementById('limitFill').style.width = `${spentPercentage}%`;
+
+            // Update freeze button based on status
+            const freezeBtn = document.getElementById('freezeCardBtn');
+            if (cardStatus === 'Frozen') {
+                freezeBtn.innerHTML = '<i class="fas fa-fire"></i><span>Unfreeze Card</span>';
+            } else {
+                freezeBtn.innerHTML = '<i class="fas fa-snowflake"></i><span>Freeze Card</span>';
+            }
+        }
+
+        function toggleCardFreeze() {
+            if (!userData) return;
+            
+            userData.cardStatus = userData.cardStatus === 'Active' ? 'Frozen' : 'Active';
+            updateCardManager();
+            
+            const message = userData.cardStatus === 'Frozen' ? 
+                'Card has been frozen for security' : 
+                'Card has been activated';
+            
+            alert(message);
+        }
+
+        function loadTransactionHistory() {
+            const transactionList = document.getElementById('transactionList');
+            const transactionHistory = userData.transactionHistory || '';
+            
+            if (!transactionHistory) {
+                transactionList.innerHTML = `
+                    <div style="text-align: center; padding: 3rem; color: var(--grey-medium);">
+                        <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                        <p>No transactions yet</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const transactions = transactionHistory.split(';').filter(t => t.trim());
+            
+            transactionList.innerHTML = transactions.map(transaction => {
+                const parts = transaction.split('|');
+                if (parts.length < 4) return '';
+                
+                const [type, title, date, amount] = parts;
+                const isCredit = type.toLowerCase() === 'credit';
+                
+                return `
+                    <div class="transaction-item">
+                        <div class="transaction-icon ${isCredit ? 'credit' : 'debit'}">
+                            <i class="fas fa-${isCredit ? 'arrow-down' : 'arrow-up'}"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">${title}</div>
+                            <div class="transaction-date">${date}</div>
+                        </div>
+                        <div class="transaction-amount ${isCredit ? 'credit' : 'debit'}">
+                            ${isCredit ? '+' : '-'}${formatCurrency(Math.abs(parseFloat(amount)), 'USD')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateAnalytics() {
+            const analyticsGrid = document.getElementById('analyticsGrid');
+            
+            const analytics = [
+                { label: 'Monthly Inflow', value: '$127,485', trend: 'up', change: '+12.5%' },
+                { label: 'Monthly Outflow', value: '$43,290', trend: 'down', change: '-3.2%' },
+                { label: 'Net Worth Growth', value: '+$84,195', trend: 'up', change: '+18.7%' },
+                { label: 'Investment ROI', value: parseFloat(userData.investmentGrowth || 0).toFixed(2) + '%', trend: 'up', change: '+2.1%' }
+            ];
+
+            analyticsGrid.innerHTML = analytics.map(item => `
+                <div class="analytics-card">
+                    <p class="analytics-label">${item.label}</p>
+                    <p class="analytics-value">${item.value}</p>
+                    <p class="analytics-trend ${item.trend}">
+                        <i class="fas fa-arrow-${item.trend === 'up' ? 'up' : 'down'}"></i>
+                        <span>${item.change}</span>
+                    </p>
+                </div>
+            `).join('');
+        }
+
+        // ==================== NAVBAR SCROLL EFFECT ====================
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar && window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else if
