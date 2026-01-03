@@ -2,130 +2,320 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MENA Dominion Bank | Sovereign Wealth Management</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta name="description" content="MDB - The Global Leader in Sovereign Wealth & Offshore Assets.">
+    <meta name="theme-color" content="#050a14">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2830/2830284.png">
 </head>
-<body class="luxury-dark-mode">
+<body class="dark-vault">
 
-    <div id="app-preloader">
-        <div class="vault-door-loader">
-            <div class="gear"></div>
-            <p>ESTABLISHING SECURE CONNECTION...</p>
-        </div>
-    </div><main id="landing-hero" class="full-page-hero">
-        <header class="global-nav">
-            <div class="nav-container">
-                <div class="logo">MENA <span class="gold">DOMINION</span></div>
-                <div class="nav-links">
-                    <a href="#assets">Sovereign Assets</a>
-                    <a href="#security">Vault Encryption</a>
-                    <button class="btn-login-trigger" onclick="toggleVault()">ACCESS THE VAULT</button>
-                </div>
+    <div id="app-preloader" class="preloader-overlay">
+        <div class="loader-content">
+            <div class="mdb-logo-shimmer">MDB</div>
+            <p class="security-text">ESTABLISHING SECURE PROTOCOL...</p>
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section class="hero-content">
-            <div class="hero-text-block">
-                <h2 class="cinzel animate-fade">THE SOVEREIGN STANDARD</h2>
-                <h1 class="animate-up">Protecting Global <br><span class="gold-shimmer">Private Equity</span></h1>
-                <p>Bespoke wealth management for family offices, sovereign entities, and institutional clients. No borders. No limits.</p>
-                <div class="hero-cta">
-                    <button class="btn-gold-large" onclick="toggleVault()">Inquire for Entry</button>
-                    <button class="btn-outline-white">Global Reach</button>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="brand-logo" onclick="window.location.reload()">
+                <span class="logo-gold">MENA</span><span class="logo-white">DOMINION</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#services" class="nav-link">SERVICES</a>
+                <a href="#wealth" class="nav-link">WEALTH</a>
+                <button class="btn-vault-access" onclick="toggleVault()">
+                    <i class="fa fa-shield-halved"></i> ACCESS VAULT
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="landing-hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2070" 
+                 alt="Luxury Backdrop" class="hero-bg-img">
+            
+            <div class="hero-content animate-up">
+                <div class="badge-sovereign">OFFSHORE ASSET PROTECTION</div>
+                <h1 class="main-title">Modern Wealth. <br><span class="gold-gradient text-glow">Sovereign Control.</span></h1>
+                <p class="hero-subtitle">
+                    The world's most secure digital infrastructure for high-net-worth individuals 
+                    and global institutional capital.
+                </p>
+                <div class="hero-cta-group">
+                    <button class="btn-primary-gold" onclick="toggleVault()">ENTER PRIVATE VAULT</button>
+                    <button class="btn-outline-white">EXPLORE OFFSHORE EQUITY</button>
+                </div>
+                
+                <div class="market-ticker">
+                    <div class="ticker-item"><span class="t-label">XAU/USD:</span> <span class="t-val green">+$12.40</span></div>
+                    <div class="ticker-item"><span class="t-label">BTC/USD:</span> <span class="t-val green">+$1,205</span></div>
+                    <div class="ticker-item"><span class="t-label">BRENT:</span> <span class="t-val red">-$0.15</span></div>
                 </div>
             </div>
         </section>
 
-        <div class="asset-ticker">
-            <div class="ticker-item"><span>GOLD/USD</span> <span class="up">+1.2%</span></div>
-            <div class="ticker-item"><span>OIL/BRENT</span> <span class="up">+0.8%</span></div>
-            <div class="ticker-item"><span>BTC/EQUITY</span> <span class="down">-0.4%</span></div>
-        </div>
-    </main><section id="dashboard-app" class="dashboard-hidden" style="display:none;">
-        <aside class="sidebar-nav">
-            <div class="sidebar-brand">MDB <span class="gold">PRIVATE</span></div>
-            <nav class="side-links">
-                <a href="#" class="active"><i class="fa fa-gem"></i> Wealth Overview</a>
-                <a href="#"><i class="fa fa-exchange-alt"></i> Global Transfers</a>
-                <a href="#"><i class="fa fa-chart-line"></i> Analytics</a>
-                <a href="#"><i class="fa fa-credit-card"></i> Card Management</a>
-                <a href="#" onclick="logout()" class="logout-link"><i class="fa fa-sign-out-alt"></i> Exit Vault</a>
-            </nav>
-        </aside>
+        <section id="wealth-modules" class="info-grid">
+            <div class="section-tag">PRIVATE WEALTH MODULES</div>
+            <div class="grid-container">
+                <div class="info-card glass-card">
+                    <div class="card-icon"><i class="fa fa-globe-americas"></i></div>
+                    <h3>Global Asset Management</h3>
+                    <p>Strategic capital allocation across 45+ international markets with zero local tax exposure.</p>
+                </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MENA Dominion Bank | Sovereign Wealth Management</title>
+    
+    <meta name="description" content="MDB - The Global Leader in Sovereign Wealth & Offshore Assets.">
+    <meta name="theme-color" content="#050a14">
 
-        <div class="main-content-panel">
-            <header class="panel-header">
-                <div class="user-greeting">Welcome back, <span id="client-name-top">Sovereign Client</span></div>
-                <div class="multi-currency-hub">
-                    <button class="curr-pill active" onclick="switchCurrency('USD')">USD</button>
-                    <button class="curr-pill" onclick="switchCurrency('EUR')">EUR</button>
-                    <button class="curr-pill" onclick="switchCurrency('GBP')">GBP</button>
-                </div>
-            </header>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2830/2830284.png">
+</head>
+<body class="dark-vault">
 
-            <div class="dashboard-grid">
-                <div class="glass-card wealth-summary">
-                    <small>Consolidated Balance</small>
-                    <h1 id="main-balance-display">$0,000,000.00</h1>
-                    <div class="card-footer">
-                        <span class="status-indicator active">Live Syncing</span>
-                        <span id="acc-num-display">ACC: **** 8821</span>
-                    </div>
-                </div>
-
-                <div class="glass-card analytics-module">
-                    <div class="module-head">
-                        <h3>Portfolio Performance</h3>
-                        <span id="growth-percent" class="growth-up">+0.0%</span>
-                    </div>
-                    <div id="chart-canvas-container">
-                        <canvas id="growthChart"></canvas>
-                    </div>
-                </div>
-
-                <div class="glass-card card-visual-box">
-                    <h3>Sovereign Obsidian Card</h3>
-                    <div class="physical-card" id="card-mockup">
-                        <div class="chip"></div>
-                        <div class="card-details">
-                            <span class="card-num">**** **** **** 8821</span>
-                            <span class="card-holder" id="holder-name">MEMBER NAME</span>
-                        </div>
-                        <div class="card-brand">VISA INFINITE</div>
-                    </div>
-                    <button class="btn-freeze" onclick="toggleFreeze()"><i class="fa fa-snowflake"></i> Freeze Asset</button>
-                </div>
+    <div id="app-preloader" class="preloader-overlay">
+        <div class="loader-content">
+            <div class="mdb-logo-shimmer">MDB</div>
+            <p class="security-text">ESTABLISHING SECURE PROTOCOL...</p>
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
             </div>
-
-            <div class="ledger-section">
-                <h3>Global Activity Ledger</h3>
-                <div id="ledger-rows-container" class="ledger-rows">
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="vault-modal" class="modal-overlay" style="display:none;">
-        <div class="modal-vault-box">
-            <h2>ENTER THE VAULT</h2>
-            <div class="input-group">
-                <label>Sovereign ID</label>
-                <input type="text" id="input-user" placeholder="Enter Username">
-            </div>
-            <div class="input-group">
-                <label>Access Key</label>
-                <input type="password" id="input-pass" placeholder="Enter Password">
-            </div>
-            <button class="btn-auth" onclick="processLogin()">AUTHORIZE SESSION</button>
-            <button class="btn-close" onclick="toggleVault()">CANCEL</button>
         </div>
     </div>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="brand-logo" onclick="window.location.reload()">
+                <span class="logo-gold">MENA</span><span class="logo-white">DOMINION</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#services" class="nav-link">SERVICES</a>
+                <a href="#wealth" class="nav-link">WEALTH</a>
+                <button class="btn-vault-access" onclick="toggleVault()">
+                    <i class="fa fa-shield-halved"></i> ACCESS VAULT
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="landing-hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2070" 
+                 alt="Luxury Backdrop" class="hero-bg-img">
+            
+            <div class="hero-content animate-up">
+                <div class="badge-sovereign">OFFSHORE ASSET PROTECTION</div>
+                <h1 class="main-title">Modern Wealth. <br><span class="gold-gradient text-glow">Sovereign Control.</span></h1>
+                <p class="hero-subtitle">
+                    The world's most secure digital infrastructure for high-net-worth individuals 
+                    and global institutional capital.
+                </p>
+                <div class="hero-cta-group">
+                    <button class="btn-primary-gold" onclick="toggleVault()">ENTER PRIVATE VAULT</button>
+                    <button class="btn-outline-white">EXPLORE OFFSHORE EQUITY</button>
+                </div>
+                
+                <div class="market-ticker">
+                    <div class="ticker-item"><span class="t-label">XAU/USD:</span> <span class="t-val green">+$12.40</span></div>
+                    <div class="ticker-item"><span class="t-label">BTC/USD:</span> <span class="t-val green">+$1,205</span></div>
+                    <div class="ticker-item"><span class="t-label">BRENT:</span> <span class="t-val red">-$0.15</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wealth-modules" class="info-grid">
+            <div class="section-tag">PRIVATE WEALTH MODULES</div>
+            <div class="grid-container">
+                <div class="info-card glass-card">
+                    <div class="card-icon"><i class="fa fa-globe-americas"></i></div>
+                    <h3>Global Asset Management</h3>
+                    <p>Strategic capital allocation across 45+ international markets with zero local tax exposure.</p>
+                </div>
+                <div id="transfer-modal" class="modal-overlay" style="display:none;">
+            <div class="modal-glass-container wide-modal">
+                <div class="modal-header">
+                    <i class="fa fa-paper-plane gold-icon-large"></i>
+                    <h2>SWIFT ASSET TRANSFER</h2>
+                    <p>SECURE INTERBANK ROUTING PROTOCOL</p>
+                </div>
+                
+                <div class="transfer-form-grid">
+                    <div class="form-col">
+                        <label>BENEFICIARY BANK (BIC/SWIFT)</label>
+                        <input type="text" id="tx-swift" placeholder="e.g. MDBKAEADXXX">
+                        
+                        <label>IBAN / ACCOUNT NUMBER</label>
+                        <input type="text" id="tx-iban" placeholder="Enter Full IBAN">
+                        
+                        <label>BENEFICIARY FULL NAME</label>
+                        <input type="text" id="tx-name" placeholder="Legal Entity or Individual">
+                    </div>
+                    
+                    <div class="form-col">
+                        <label>TRANSFER AMOUNT (USD)</label>
+                        <div class="amount-input-wrapper">
+                            <span>$</span>
+                            <input type="number" id="tx-amount" placeholder="0.00">
+                        </div>
+                        
+                        <label>TRANSFER REFERENCE</label>
+                        <select id="tx-ref">
+                            <option>Corporate Investment</option>
+                            <option>Family Office Distribution</option>
+                            <option>Real Estate Acquisition</option>
+                            <option>Consultancy Services</option>
+                        </select>
+
+                        <div class="fee-estimate">
+                            <span>Estimated Network Fee:</span>
+                            <strong id="tx-fee">$45.00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="security-verification-box">
+                    <p>Enter your 4-digit Transaction PIN to authorize this wire:</p>
+                    <div class="pin-entry-row">
+                        <input type="password" maxlength="4" id="auth-pin" placeholder="****">
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-cancel" onclick="closeTransfer()">ABORT</button>
+                    <button class="btn-execute" onclick="executeWire()">EXECUTE SWIFT WIRE</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="card-manager-section" class="card-mgmt-root" style="display:none;">
+            <div class="section-header-centered">
+                <span class="gold-subtitle">PHYSICAL & VIRTUAL ASSETS</span>
+                <h2>Mastercard® Black Edition</h2>
+            </div>
+
+            <div class="card-viewer-container">
+                <div class="physical-card-premium" id="premium-card-ui">
+                    <div class="card-shimmer"></div>
+                    <div class="card-top-row">
+                        <div class="card-logo">MDB</div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MC" width="40">
+                    </div>
+                    <div class="card-chip-gold"></div>
+                    <div class="card-number-display">5542 •••• •••• 9921</div>
+                    <div class="card-footer-row">
+                        <div class="holder-info">
+                            <small>CARD HOLDER</small>
+                            <div id="card-holder-display">CLIENT NAME</div>
+                        </div>
+                        <div class="expiry-info">
+                            <small>EXPIRES</small>
+                            <div>12 / 28</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-controls-grid">
+                    <div class="control-tile" onclick="toggleFreeze()">
+                        <i class="fa fa-lock"></i>
+                        <h4>Lock Card</h4>
+                        <p id="freeze-status-text">Active</p>
+                    </div>
+                    <div class="control-tile">
+                        <i class="fa fa-sliders"></i>
+                        <h4>Limits</h4>
+                        <p>Set Spending Cap</p>
+                    </div>
+                    <div class="control-tile">
+                        <i class="fa fa-eye"></i>
+                        <h4>Reveal PIN</h4>
+                        <p>Security Check Required</p>
+                    </div>
+                    <div class="control-tile">
+                        <i class="fa fa-globe"></i>
+                        <h4>Intl. Usage</h4>
+                        <p>Enabled Globally</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sovereign-footer">
+        <div class="footer-top-row">
+            <div class="footer-column brand-col">
+                <div class="footer-logo">MENA<span class="gold">DOMINION</span></div>
+                <p>Redefining Global Private Banking for the 21st Century Sovereign Wealth Holder.</p>
+                <div class="social-links">
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>INSTITUTIONAL</h4>
+                <ul>
+                    <li><a href="#">Governance</a></li>
+                    <li><a href="#">Annual Reports</a></li>
+                    <li><a href="#">Offshore Centers</a></li>
+                    <li><a href="#">Liquidity Ratios</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>CLIENT SERVICES</h4>
+                <ul>
+                    <li><a href="#">24/7 Concierge</a></li>
+                    <li><a href="#">Wealth Advisory</a></li>
+                    <li><a href="#">Estate Planning</a></li>
+                    <li><a href="#">Security Protocols</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-col">
+                <h4>GLOBAL REACH</h4>
+                <p><i class="fa fa-location-dot"></i> Dubai International Financial Centre (DIFC)</p>
+                <p><i class="fa fa-location-dot"></i> London / Zurich / Singapore</p>
+                <p><i class="fa fa-phone"></i> +971 (0) 4 VAULT 00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom-legal">
+            <div class="legal-flex">
+                <span>&copy; 2026 MENA Dominion Bank Group. All Rights Reserved.</span>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Sovereign Service</a>
+                    <a href="#">AML / KYC Compliance</a>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+            <div class="trust-badges">
+                <img src="https://cdn-icons-png.flaticon.com/512/2592/2592201.png" alt="SSL" width="25">
+                <span>AES-256 BANK-GRADE ENCRYPTION ACTIVE</span>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
