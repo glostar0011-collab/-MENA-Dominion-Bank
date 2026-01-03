@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="MENA Dominion Bank - Private Wealth Sovereignty for the Global Elite.">
+    <meta name="author" content="MENA Dominion Bank Digital Division">
+    <title>MENA Dominion Bank | Private Digital Vault</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root { --gold: #d4af37; --navy: #0a192f; --glass: rgba(255,255,255,0.05); }
+        body, html { margin: 0; padding: 0; background: var(--navy); overflow-x: hidden; font-family: 'Montserrat', sans-serif; }
+        .master-loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #050c18; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .loader-ring { width: 80px; height: 80px; border: 2px solid var(--gold); border-top: 2px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .loader-text { margin-top: 20px; color: var(--gold); font-family: 'Cinzel'; letter-spacing: 5px; font-size: 14px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    </style>
+</head>
+<body>
+
+    <div id="app-preloader" class="master-loader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">MENA DOMINION</div>
+    </div>
+
+    <header class="global-header">
+        <div class="header-container">
+            <div class="brand-box">
+                <h1 class="logo-text">MENA <span class="gold-text">DOMINION</span></h1>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="#wealth">Wealth</a></li>
+                    <li><a href="#sovereignty">Sovereignty</a></li>
+                    <li><a href="#corporate">Corporate</a></li>
+                    <li><a href="#sharia">Sharia</a></li>
+                </ul>
+            </nav>
+            <div class="auth-trigger">
+                <button onclick="toggleVault()" class="btn-vault">
+                    <i class="fa fa-shield-halved"></i> <span>SECURE ACCESS</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="view-manager">
+
+        <section id="landing-hero" class="full-viewport">
+            <div class="hero-video-overlay"></div>
+            <div class="content-wrapper animate-up">
+                <span class="sub-heading">Global Financial Sovereignty</span>
+                <h2 class="main-heading">Direct Command Over <br>Your Capital Legacy</h2>
+                <p class="hero-p">Providing institutional-grade security for the world's most significant private portfolios.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary-gold">Inquire for Membership</button>
+                    <button class="btn-secondary-outline">Private Concierge</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="section-label">Institutional Divisions</div>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <i class="fa fa-gem"></i>
+                    <h3>Private Wealth</h3>
+                    <p>Bespoke asset management across 40+ global jurisdictions.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa fa-landmark"></i>
+                    <h3>Sovereign Services</h3>
+                    <p>Governmental and institutional liquidity solutions.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa fa-vault"></i>
+                    <h3>The Reserve Vault</h3>
+                    <p>Physical and digital gold storage with 100% transparency.</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="vault-modal" class="modal-backdrop" style="display:none;">
+            <div class="modal-content glass-effect">
+                <div class="modal-header">
+                    <h3>SECURE VAULT ENTRY</h3>
+                    <button onclick="toggleVault()" class="close-x">&times;</button>
+                </div>
+                <div class="auth-body">
+                    <div class="field-wrap">
+                        <label>DOMINION ID</label>
+                        <input type="text" id="input-user" placeholder="Enter Username">
+                    </div>
+                    <div class="field-wrap">
+                        <label>PASSPHRASE</label>
+                        <input type="password" id="input-pass" placeholder="Enter Password">
+                    </div>
+                    <button onclick="processLogin()" class="btn-auth-action">AUTHORIZE SESSION</button>
+                    <p class="security-note">All sessions are recorded via the MDB Global Shield Protocol.</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="dashboard-app" class="dashboard-root" style="display:none;">
+            <nav class="mobile-app-bar">
+                <div class="user-pill">
+                    <img src="https://ui-avatars.com/api/?name=User&background=d4af37&color=fff" id="user-avatar">
+                    <span id="client-name">Loading Profile...</span>
+                </div>
+                <button onclick="logout()" class="exit-btn"><i class="fa fa-power-off"></i></button>
+            </nav>
+
+            <div class="app-scroll-area">
+                <div class="balance-card-wrapper animate-slide-in">
+                    <div class="luxury-card">
+                        <div class="card-top">
+                            <p>Master Portfolio Balance</p>
+                            <h1 id="user-balance">0.00</h1>
+                            <span id="user-currency">USD</span>
+                        </div>
+                        <div class="card-bottom">
+                            <p id="user-acc-num">Acc: **** **** **** 0000</p>
+                            <p id="user-acc-type">VIP SOVEREIGN</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analytics-row">
+                    <div class="stat-card">
+                        <small>Credit Rating</small>
+                        <h2 id="user-credit">---</h2>
+                        <p>Dominion Score</p>
+                    </div>
+                    <div class="stat-card">
+                        <small>Status</small>
+                        <h2 id="user-status">Active</h2>
+                        <p>Account Health</p>
+                    </div>
+                </div>
+
+                <div class="ledger-box">
+                    <div class="ledger-header">
+                        <h3>Global Activity Ledger</h3>
+                        <i class="fa fa-filter"></i>
+                    </div>
+                    <div class="transaction-list" id="user-history">
+                        <div class="empty-state">No records found for current session.</div>
+                    </div>
+                </div>
+
+                <div id="pin-verification" class="pin-overlay" style="display:none;">
+                    <div class="pin-box">
+                        <h3>Enter 4-Digit PIN</h3>
+                        <div class="pin-inputs">
+                            <input type="password" maxlength="1" class="pin-digit">
+                            <input type="password" maxlength="1" class="pin-digit">
+                            <input type="password" maxlength="1" class="pin-digit">
+                            <input type="password" maxlength="1" class="pin-digit">
+                        </div>
+                        <button class="btn-gold-fill">VERIFY TRANSACTION</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="f-col">
+                <h4>MENA DOMINION</h4>
+                <p>Establishing digital financial sovereignty since 2012.</p>
+            </div>
+            <div class="f-col">
+                <h4>GLOBAL HUBS</h4>
+                <ul><li>Dubai</li><li>Singapore</li><li>London</li><li>Zürich</li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MENA Dominion Bank. Member of the Sovereign Wealth Group. GFA Regulated.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Internal page manager script
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('app-preloader').style.display = 'none';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
